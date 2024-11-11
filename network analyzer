@@ -13,11 +13,11 @@ def packet_analyzer(packet):
         if packet.haslayer(TCP):
             sport = packet[TCP].sport
             dport = packet[TCP].dport
-            print(f"TCP Source Port: {sport} | TCP Destination Port: {dport})
+            print(f"TCP Source Port: {sport} | TCP Destination Port: {dport}")
         elif packet.haslayer(UDP):
                   sport = packet[UDP].sport
                   dport = packet[UDP].dport
-                  print(f"UDP Source Port: {sport}  | UDP Destination Port: {dport})
+                  print(f"UDP Source Port: {sport}  | UDP Destination Port: {dport}")
         
 
         print("-" * 50)
@@ -31,4 +31,4 @@ def start_sniffer():
 
 if __name__ == "__main__":
     start_sniffer()
-    
+
