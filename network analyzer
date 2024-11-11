@@ -1,0 +1,7 @@
+from scapy.all import *
+
+# Funnction to analyze and print packet details
+def packet_analyzer(packet):
+    # Check if the Packet has ann IP layer
+    if packet.haslayer(IP):
+        ip_src = packet[IP].src
